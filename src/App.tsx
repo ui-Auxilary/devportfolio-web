@@ -1,7 +1,12 @@
+import SmoothScroll from "components/SmoothScroll"
+import Home from "./pages/Home"
+import GlobalStyle from "globalStyles"
+
 function App() {
   return (
     <>
-      <p>Hello world</p>
+      <GlobalStyle />
+      <Home />
     </>
   )
 }
