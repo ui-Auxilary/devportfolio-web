@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Hero = styled.div`
     height: 100vh;
@@ -51,16 +52,9 @@ const Tab = styled.div`
     align-items: center;
     height: 20px;
     gap: 10px;
-
-    & > span {
-        background-color: #7C3579;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 15px;
-    }
 `
 
-const Title = styled.div`
+const HeroTitle = styled(motion.div)`
     display: flex;
     gap: 20px;
 `
@@ -73,7 +67,7 @@ const Logos = styled.div`
     justify-content: center;
 `
 
-const Line = styled.div`
+const Line = styled(motion.div)`
     width: 5px;
     height: 100%;
     padding: 5px 0px;
@@ -105,23 +99,30 @@ const Lower = styled.img`
     right: 3vw;
 `
 
-const Github = styled.img`
+const Github = styled(motion.img)`
     width: 3.5vw;
     &:hover {
         stroke: #000;
     }
 `
 
-const Linkedin = styled.img`
+const Linkedin = styled(motion.img)`
     width: 3.5vw;
 `
 
-const Mouse = styled.img`
-    width: 3vw;
+const Mouse = styled(motion.img)`
+    width: 3vw
     display: flex;
     align-self: center;
     margin-top: 50px;
     margin-left: -5vw;
+`
+
+const Tag = styled(motion.span)`
+    background-color: #7C3579;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
 `
 
 export default {
@@ -135,7 +136,8 @@ export default {
     Lower,
     Mouse,
     Tab,
-    Title,
+    Tag,
+    HeroTitle,
     Upper,
     Wrapper
 }

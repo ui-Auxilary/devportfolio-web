@@ -21,8 +21,9 @@ const ScrollButton = styled.img`
     width: 3vw;
     background: #FFD7D7;
     border-radius: 100%;
-    position: fixed;
-    left: 5px;
+    position: absolute;
+    right: 3vw;
+    bottom: 5vh;
 `;
 
 export default {

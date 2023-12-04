@@ -6,6 +6,7 @@ import Linkedin from 'assets/linkedin.svg'
 import Github from 'assets/github.svg'
 import Diagonal from 'assets/diagonals.svg'
 import Mouse from 'assets/mouse.svg'
+import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 
 export default function Landing() {
@@ -16,21 +17,56 @@ export default function Landing() {
             <S.Container>
                 <S.Wrapper>
                     <S.Tab>
-                        <S.Line></S.Line>
-                        <span>SOFTWARE DEVELOPER</span>
+                        <S.Line
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "100%" }}
+                            transition={{ duration: 1 }}
+                        />
+                        <S.Tag
+                            initial={{ opacity: 0, width: 0 }}
+                            animate={{ opacity: 1, width: "fit-content" }}
+                            transition={{ duration: 1, delay: 0.5 }}
+                        >
+                            <p style={{ height: "100%", whiteSpace: "nowrap" }}>SOFTWARE DEVELOPER</p>
+                        </S.Tag>
                     </S.Tab>
-                    <S.Title>
-                        <div>
+                    <S.HeroTitle>
+                        <motion.div
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
                             <h1 className='titleUnderlay'>CHRISTIAN</h1>
                             <h1 className='title'>CHRISTIAN</h1>
-                        </div>
+                        </motion.div>
                         <S.Logos>
-                            <S.Github src={Github} />
-                            <S.Linkedin src={Linkedin} />
+                            <S.Github
+                                src={Github}
+                                initial={{ opacity: 0, y: -80 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                            />
+                            <S.Linkedin
+                                src={Linkedin}
+                                initial={{ opacity: 0, y: -40 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.8 }}
+                            />
                         </S.Logos>
-                    </S.Title>
-                    <p>Hi, I’m a software developer based in <span>SYDNEY</span> with a passion for UI/UX</p>
-                    <S.Mouse src={Mouse} />
+                    </S.HeroTitle>
+                    <motion.p
+                        initial={{ opacity: 0, x: -80 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1 }}
+                    >
+                        Hi, I’m a software developer based in <span>SYDNEY</span> with a passion for UI/UX
+                    </motion.p>
+                    <S.Mouse
+                        src={Mouse}
+                        initial={{ opacity: 0, y: -40 }}
+                        animate={{ opacity: 1, y: 0, scale: 0.7 }}
+                        transition={{ duration: 0.5, delay: 1 }}
+                    />
                 </S.Wrapper>
             </S.Container>
             <S.Diagonal src={Diagonal} />

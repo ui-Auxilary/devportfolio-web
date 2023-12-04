@@ -11,11 +11,6 @@ import S from './styles';
 import Cursor from "components/Cursor";
 
 export default function Home() {
-    const [mousePos, setMousePos] = useState({
-        x: 0,
-        y: 0
-    })
-
     const scrollConfig = {
         ease: 0.04,
         current: 0,
