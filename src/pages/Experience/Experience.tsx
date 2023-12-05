@@ -62,7 +62,7 @@ export default function Experience() {
 
     return (
         <IconContext.Provider value={{ size: "2em" }}>
-            <S.Container id="contact">
+            <S.Container id="experience">
                 <S.Title>
                     Experience
                 </S.Title>
