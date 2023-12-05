@@ -1,8 +1,10 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const Container = styled.div`
     background: linear-gradient(180deg, #2C313A 10.79%, #2C313A 100%);
     padding: 50px;
+    height: 100vh;;
 `;
 
 const Title = styled.h1`
@@ -18,15 +20,20 @@ const Title = styled.h1`
 `
 
 const ExperienceList = styled.div`
+    display: flex;
     padding: 25px;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 `
 
 const ExperienceAccordion = styled.div`
-    height: 120px;
-    width: 80%;
+    height: 60px;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 14px;
     padding: 25px;
     border-radius: 15px;
     background: linear-gradient(90deg, #A109FF 17.86%, #505050 122.32%);
@@ -41,7 +48,16 @@ const Year = styled.h3`
 
 `
 
+
+const Answer = styled(motion.div)`
+    height: auto;
+    display: flex;
+    background: hsl(252deg 19.84% 32.32% / 40%);
+    border-radius: 20px;
+    width: 60%;
+`;
 export default {
+    Answer,
     Container,
     ExperienceAccordion,
     ExperienceList,

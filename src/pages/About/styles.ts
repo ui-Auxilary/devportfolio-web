@@ -14,6 +14,7 @@ const Container = styled.div`
 `
 
 const About = styled.div`
+    flex: 1;
     padding: 25px;
 
     & > h1 {
@@ -37,7 +38,13 @@ const About = styled.div`
 
 const TechWrapper = styled.div`
     display: flex;
+    flex: 1.5;
     flex-direction: column;
+
+    & > span {
+        font-size: 2em;
+        font-weight: 800;
+    }
 `
 
 const TechStack = styled.div`

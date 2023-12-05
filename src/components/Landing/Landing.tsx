@@ -4,10 +4,9 @@ import upper from 'assets/uppertron.svg'
 import lower from 'assets/lowertron.svg'
 import Linkedin from 'assets/linkedin.svg'
 import Github from 'assets/github.svg'
-import Diagonal from 'assets/diagonals.svg'
-import Mouse from 'assets/mouse.svg'
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
+import Diagonals from 'components/DiagonalSVG'
+import MouseSVG from 'components/MouseSVG'
 
 export default function Landing() {
     return (
@@ -61,15 +60,11 @@ export default function Landing() {
                     >
                         Hi, I’m a software developer based in <span>SYDNEY</span> with a passion for UI/UX
                     </motion.p>
-                    <S.Mouse
-                        src={Mouse}
-                        initial={{ opacity: 0, y: -40 }}
-                        animate={{ opacity: 1, y: 0, scale: 0.7 }}
-                        transition={{ duration: 0.5, delay: 1 }}
-                    />
+                    <MouseSVG />
                 </S.Wrapper>
             </S.Container>
-            <S.Diagonal src={Diagonal} />
+            <Diagonals />
+            {/* <S.Diagonal src={Diagonal} /> */}
             <S.Lower src={lower} />
         </S.Hero>
     )

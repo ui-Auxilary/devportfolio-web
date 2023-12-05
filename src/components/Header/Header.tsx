@@ -27,6 +27,16 @@ export default function Header() {
                 </Link>
                 <Link
                     activeClass="active"
+                    to="experience"
+                    spy={true}
+                    smooth={true}
+                    offset={1}
+                    duration={500}
+                >
+                    Experience
+                </Link>
+                <Link
+                    activeClass="active"
                     to="contact"
                     spy={true}
                     smooth={true}
@@ -35,7 +45,6 @@ export default function Header() {
                 >
                     Contact
                 </Link>
-                <li>Resume</li>
             </S.Nav>
         </S.Header>
     )

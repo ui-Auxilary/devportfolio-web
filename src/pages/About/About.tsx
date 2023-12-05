@@ -28,7 +28,7 @@ export default function About() {
                     </p>
                 </S.About>
                 <S.TechWrapper>
-                    Tech Stack
+                    <span>Tech Stack</span>
                     <S.TechStack>
                         {TechStack.map((node) => <S.TechBubble>{node}</S.TechBubble>)}
                     </S.TechStack>

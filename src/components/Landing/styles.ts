@@ -73,13 +73,6 @@ const Line = styled(motion.div)`
     padding: 5px 0px;
     background: #E0CCFF;    
 `
-const Diagonal = styled.img`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 31vw;
-    height: 100vh;
-`
 
 const Upper = styled.img`
     width: fit-content;
@@ -110,14 +103,6 @@ const Linkedin = styled(motion.img)`
     width: 3.5vw;
 `
 
-const Mouse = styled(motion.img)`
-    width: 3vw
-    display: flex;
-    align-self: center;
-    margin-top: 50px;
-    margin-left: -5vw;
-`
-
 const Tag = styled(motion.span)`
     background-color: #7C3579;
     padding: 5px 10px;
@@ -130,11 +115,9 @@ export default {
     Github,
     Hero,
     Line,
-    Diagonal,
     Linkedin,
     Logos,
     Lower,
-    Mouse,
     Tab,
     Tag,
     HeroTitle,
