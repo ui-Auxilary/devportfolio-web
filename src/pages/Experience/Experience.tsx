@@ -1,4 +1,4 @@
-import { AnimatePresence, easeOut, motion } from 'framer-motion'
+import { AnimatePresence, easeOut } from 'framer-motion'
 import S from './styles'
 import { useState } from 'react';
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
@@ -25,7 +25,7 @@ const experienceList = [
     },
 ]
 
-const ExperienceAccordion = ({ idx, active, title, year, description, onShow }) => {
+const ExperienceAccordion = ({ idx, active, title, year, description, onShow }: any) => {
     return (
         <>
             <S.ExperienceAccordion onClick={() => { active ? onShow(0) : onShow(idx) }}>

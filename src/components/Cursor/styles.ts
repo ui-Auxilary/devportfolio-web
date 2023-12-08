@@ -13,17 +13,6 @@ const fadeIn = keyframes`
     }
 `
 
-const hover = keyframes`
-    from {
-      background: #fff;
-    }
-
-  
-    to {
-        background: #000;
-    }
-`
-
 const Cursor = styled(motion.div)`
     background: #CAE9F1;
     position: fixed;
@@ -51,6 +40,6 @@ const Secondary = styled.div`
 `
 
 export default {
-    Secondary,
-    Cursor
+  Secondary,
+  Cursor
 }

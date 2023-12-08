@@ -15,19 +15,21 @@ export default function Cursor() {
         key: -1
     });
 
-    const handleMouse = (e) => {
+    const handleMouse = (e: MouseEvent) => {
         const { clientX, clientY } = e;
 
         const mouseX = clientX;
         const mouseY = clientY;
 
-        positionRef.current.mouseX = clientX -
-            secondaryCursor.current.clientWidth / 2;
-        positionRef.current.mouseY = clientY -
-            secondaryCursor.current.clientHeight / 2;
-        mainCursor.current.style.transform = `translate3d(${mouseX -
-            mainCursor.current.clientWidth / 2}px, ${mouseY -
-            mainCursor.current.clientHeight / 2}px, 0)`;
+        if (secondaryCursor.current != null && mainCursor.current != null) {
+            positionRef.current.mouseX = clientX -
+                (secondaryCursor.current as HTMLElement).clientWidth / 2;
+            positionRef.current.mouseY = clientY -
+                (secondaryCursor.current as HTMLElement).clientHeight / 2;
+            (mainCursor.current as HTMLElement).style.transform = `translate3d(${mouseX -
+                (mainCursor.current as HTMLElement).clientWidth / 2}px, ${mouseY -
+                (mainCursor.current as HTMLElement).clientHeight / 2}px, 0)`;
+        }
     }
 
     useEffect(() => {
@@ -60,7 +62,9 @@ export default function Cursor() {
                 }
             }
 
-            secondaryCursor.current.style.transform = `translate3d(${destX}px, ${destY}px, 0)`
+            if (secondaryCursor.current != null) {
+                (secondaryCursor.current as HTMLElement).style.transform = `translate3d(${destX}px, ${destY}px, 0)`
+            }
         }
 
         follow();

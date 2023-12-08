@@ -1,4 +1,3 @@
-import SmoothScroll from "components/SmoothScroll"
 import Home from "./pages/Home"
 import GlobalStyle from "globalStyles"
 
