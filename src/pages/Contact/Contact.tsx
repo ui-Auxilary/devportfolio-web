@@ -9,7 +9,7 @@ export default function Contact() {
     };
 
     return (
-        <S.Container id="contact" style={{ height: "auto", minHeight: "100vh" }}>
+        <S.Container id="contact" style={{ height: "100vh" }}>
             <S.Title>
                 Contact
             </S.Title>

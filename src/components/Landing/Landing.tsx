@@ -7,11 +7,14 @@ import Github from 'assets/github.svg'
 import { motion } from 'framer-motion'
 import Diagonals from 'components/DiagonalSVG'
 import MouseSVG from 'components/MouseSVG'
+import Sidebar from 'components/Sidebar'
+import Title from 'assets/title.svg'
 
 export default function Landing() {
     return (
         <S.Hero>
             <Header />
+            <Sidebar />
             <S.Upper src={upper} />
             <S.Container>
                 <S.Wrapper>
@@ -23,10 +26,12 @@ export default function Landing() {
                         />
                         <S.Tag
                             initial={{ opacity: 0, width: 0 }}
-                            animate={{ opacity: 1, width: "fit-content" }}
+                            animate={{ opacity: 1, width: 180 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         >
-                            <p style={{ height: "100%", whiteSpace: "nowrap" }}>SOFTWARE DEVELOPER</p>
+                            <div style={{ padding: "5px 10px", width: "fit-content" }}>
+                                <p style={{ height: "100%", whiteSpace: "nowrap" }}>SOFTWARE DEVELOPER</p>
+                            </div>
                         </S.Tag>
                     </S.Tab>
                     <S.HeroTitle>
@@ -35,8 +40,9 @@ export default function Landing() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <h1 className='titleUnderlay'>CHRISTIAN</h1>
-                            <h1 className='title'>CHRISTIAN</h1>
+                            <S.Title src={Title} />
+                            {/* <h1 className='titleUnderlay'>CHRISTIAN</h1>
+                            <h1 className='title'>CHRISTIAN</h1> */}
                         </motion.div>
                         <S.Logos>
                             <S.Github

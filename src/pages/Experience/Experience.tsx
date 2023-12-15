@@ -13,7 +13,7 @@ const experienceList = [
     },
     {
         id: 2,
-        title: 'Software Developer @ Singtel Optus Pty Limited',
+        title: 'Software Developer @ Optus',
         year: 'May 2023 - Nov 2023',
         description: 'blah'
     },

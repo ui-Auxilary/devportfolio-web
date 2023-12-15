@@ -6,6 +6,7 @@ import Projects from "pages/Projects";
 import { useEffect, useRef } from "react";
 import S from './styles';
 import Cursor from "components/Cursor";
+import useWindowSize from "hooks/useWindowSize";
 
 export default function Home() {
     const scrollConfig = {
@@ -15,17 +16,20 @@ export default function Home() {
         rounded: 0
     }
 
-    const scrollContainer = useRef<HTMLDivElement>(null);
+    const size = useWindowSize();
 
+    const scrollContainer = useRef<HTMLDivElement>(null);
     useEffect(() => {
         if (scrollContainer.current != null) {
             document.body.style.height = `${scrollContainer?.current.getBoundingClientRect().height}px`;
         }
+
         requestAnimationFrame(() => smoothScrolling());
 
-    }, [])
+    }, [size.height])
 
     const smoothScrolling = () => {
+
         if (scrollContainer.current != null) {
             scrollConfig.current = window.scrollY;
             scrollConfig.previous += (scrollConfig.current - scrollConfig.previous) * scrollConfig.ease

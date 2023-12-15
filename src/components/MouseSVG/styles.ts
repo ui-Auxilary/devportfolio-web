@@ -7,6 +7,10 @@ const Mouse = styled(motion.div)`
     align-self: center;
     margin-top: 50px;
     margin-left: -5vw;
+
+    @media (max-width: 1024px) {
+        display: none
+    }
 `
 
 export default {

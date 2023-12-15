@@ -4,7 +4,13 @@ import styled from "styled-components";
 const Container = styled.div`
     background: linear-gradient(180deg, #2C313A 10.79%, #2C313A 100%);
     padding: 50px;
-    height: 100vh;;
+    height: 100vh;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const Title = styled.h1`
@@ -17,6 +23,10 @@ const Title = styled.h1`
     -webkit-text-fill-color: transparent;
     padding: 25px;
     padding-top: 50px;
+
+    @media (max-width: 1024px) {
+        font-size: 8vw;
+    }
 `
 
 const ExperienceList = styled.div`
@@ -38,6 +48,12 @@ const ExperienceAccordion = styled.div`
     border-radius: 15px;
     background: linear-gradient(90deg, #A109FF 17.86%, #505050 122.32%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        font-size: 10px;
+        flex-direction: column;
+    }
 `;
 
 const Role = styled.h1`
@@ -55,6 +71,10 @@ const Answer = styled(motion.div)`
     background: hsl(252deg 19.84% 32.32% / 40%);
     border-radius: 20px;
     width: 60%;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
 `;
 export default {
     Answer,

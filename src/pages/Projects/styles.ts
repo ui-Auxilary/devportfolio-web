@@ -3,6 +3,12 @@ import styled from "styled-components";
 const Container = styled.div`
     background: linear-gradient(180deg, #2C313A 10.79%, #2C313A 100%);
     padding: 50px;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const Title = styled.h1`
@@ -15,6 +21,10 @@ const Title = styled.h1`
     -webkit-text-fill-color: transparent;
     padding: 25px;
     padding-top: 50px;
+
+    @media (max-width: 1024px) {
+        font-size: 8vw;
+    }
 `
 
 const ProjectOne = styled.div`
@@ -56,6 +66,11 @@ const Grid = styled.div`
         [row2-start] "project4 project4 project3" max-content [row2-end]
         / 1fr 1fr 2fr;
     grid-gap: 20px;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 const Subsection = styled.div`

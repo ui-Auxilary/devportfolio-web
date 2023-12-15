@@ -7,7 +7,7 @@ export default function Projects() {
             <S.Title>
                 PROJECTS
             </S.Title>
-            Projects
+
             <S.Grid>
                 <S.ProjectOne>Content1</S.ProjectOne>
                 <S.ProjectTwo>Content2</S.ProjectTwo>

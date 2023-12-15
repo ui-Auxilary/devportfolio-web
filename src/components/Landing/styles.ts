@@ -5,6 +5,11 @@ const Hero = styled.div`
     height: 100vh;
     background: linear-gradient(180deg, #240E2C 14.21%, #2C313A 100%);
     padding: 0px 3vw;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+    }
 `;
 
 const Container = styled.div`
@@ -36,14 +41,22 @@ const Container = styled.div`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    @media (max-width: 1024px) {
+        margin: auto 4em;
+    }
 `
 
 const Wrapper = styled.div`
     display: flex;
-    margin-top: 50px;
+    margin-top: 100px;
     flex-direction: column;
     & > p {
         font-size: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        margin-top: 0;
     }
 `
 
@@ -57,6 +70,10 @@ const Tab = styled.div`
 const HeroTitle = styled(motion.div)`
     display: flex;
     gap: 20px;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 `
 
 const Logos = styled.div`
@@ -65,6 +82,11 @@ const Logos = styled.div`
     gap: 20px;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 1024px) {
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
 `
 
 const Line = styled(motion.div)`
@@ -79,6 +101,10 @@ const Upper = styled.img`
     height: 20vh;
     position: absolute;
     top: 0;
+
+    @media (max-width: 400px) {
+        height: 15vh
+    }
 `
 
 const Lower = styled.img`
@@ -89,7 +115,15 @@ const Lower = styled.img`
     right: 3vw;
     position: absolute;
     top: 80vh;
-    right: 3vw;
+
+    @media (max-width: 1024px) {
+        right: unset;
+        top: 80vh;
+    }
+
+    @media (max-width: 400px) {
+        height: 15vh
+    }
 `
 
 const Github = styled(motion.img)`
@@ -97,17 +131,32 @@ const Github = styled(motion.img)`
     &:hover {
         stroke: #000;
     }
+
+    @media (max-width: 1024px) {
+        width: 7.5vw;
+    }
 `
 
 const Linkedin = styled(motion.img)`
     width: 3.5vw;
+
+    @media (max-width: 1024px) {
+        width: 7.5vw;
+    }
 `
 
 const Tag = styled(motion.span)`
     background-color: #7C3579;
-    padding: 5px 10px;
     border-radius: 5px;
     font-size: 15px;
+`
+
+const Title = styled.img`
+    width: 60vw;
+
+    @media (max-width: 1024px) {
+        width: 80vw;
+    }
 `
 
 export default {
@@ -120,6 +169,7 @@ export default {
     Lower,
     Tab,
     Tag,
+    Title,
     HeroTitle,
     Upper,
     Wrapper

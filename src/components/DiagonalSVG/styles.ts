@@ -7,6 +7,8 @@ const Diagonal = styled.div`
     width: 31vw;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    align-items: end;
 `
 
 export default {

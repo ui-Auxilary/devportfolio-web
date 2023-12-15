@@ -6,9 +6,13 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     height: 100%;
+    
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 `
 const Container = styled.div`
-    height: 500px;
+    height: 100%;
     background: linear-gradient(180deg, #2C313A 10.79%, #3c5e99 100%);
     padding: 50px;
 `
@@ -25,6 +29,10 @@ const About = styled.div`
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media (max-width: 1024px) {
+            font-size: 8vw;
+        }
     }
 
     & > p {
@@ -33,6 +41,14 @@ const About = styled.div`
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.7px;
+    }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
 `
 
@@ -53,6 +69,11 @@ const TechStack = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
+    @media (max-width: 1024px) {
+        padding: unset;
+        margin-top: 10px;
+    }
 `
 
 const TechBubble = styled.div`
